@@ -15,10 +15,10 @@ def get_requirements(file_path:str)->List[str]:
     return requirements"""
 
 setup(
-    name='DimondPricePrediction',
+    name='mlops',
     version='0.0.1',
-    author='sunny savita',
-    author_email='sunny.savita@ineuron.ai',
+    author='meyyappan',
+    author_email='',
     install_requires=["scikit-learn","pandas","numpy"],
     packages=find_packages()
 )
