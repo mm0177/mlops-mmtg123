@@ -15,7 +15,7 @@ setup(
 "flask",
 "mlflow==2.2.2",
 "dvc",
-"ipykernel"
+"ipykernel",
 "xgboost",
 
 
