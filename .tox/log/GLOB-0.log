@@ -1,0 +1,68 @@
+action: GLOB, msg: packaging
+cwd: C:\Users\DELL\OneDrive\Desktop\mlops
+cmd: 'C:\Users\DELL\AppData\Local\Programs\Python\Python311\python.exe' setup.py sdist --formats=zip --dist-dir 'C:\Users\DELL\OneDrive\Desktop\mlops\.tox\dist'
+C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\setuptools\dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'MongoDB-Connect' will not be supported in future
+        versions. Please use the underscore name 'MongoDB_Connect' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\setuptools\_distutils\dist.py:265: UserWarning: Unknown distribution option: 'long_description_content'
+  warnings.warn(msg)
+running sdist
+running egg_info
+creating src\databaseautomation.egg-info
+writing src\databaseautomation.egg-info\PKG-INFO
+writing dependency_links to src\databaseautomation.egg-info\dependency_links.txt
+writing requirements to src\databaseautomation.egg-info\requires.txt
+writing top-level names to src\databaseautomation.egg-info\top_level.txt
+writing manifest file 'src\databaseautomation.egg-info\SOURCES.txt'
+reading manifest file 'src\databaseautomation.egg-info\SOURCES.txt'
+writing manifest file 'src\databaseautomation.egg-info\SOURCES.txt'
+running check
+creating databaseautomation-0.0.4
+creating databaseautomation-0.0.4\src
+creating databaseautomation-0.0.4\src\databaseautomation.egg-info
+creating databaseautomation-0.0.4\src\mongodb_connect
+copying files to databaseautomation-0.0.4...
+copying README.md -> databaseautomation-0.0.4
+copying pyproject.toml -> databaseautomation-0.0.4
+copying setup.cfg -> databaseautomation-0.0.4
+copying setup.py -> databaseautomation-0.0.4
+copying src\databaseautomation.egg-info\PKG-INFO -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+copying src\databaseautomation.egg-info\SOURCES.txt -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+copying src\databaseautomation.egg-info\dependency_links.txt -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+copying src\databaseautomation.egg-info\requires.txt -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+copying src\databaseautomation.egg-info\top_level.txt -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+copying src\mongodb_connect\__init__.py -> databaseautomation-0.0.4\src\mongodb_connect
+copying src\mongodb_connect\mongo_crud.py -> databaseautomation-0.0.4\src\mongodb_connect
+copying src\databaseautomation.egg-info\SOURCES.txt -> databaseautomation-0.0.4\src\databaseautomation.egg-info
+Writing databaseautomation-0.0.4\setup.cfg
+creating C:\Users\DELL\OneDrive\Desktop\mlops\.tox\dist
+creating 'C:\Users\DELL\OneDrive\Desktop\mlops\.tox\dist\databaseautomation-0.0.4.zip' and adding 'databaseautomation-0.0.4' to it
+adding 'databaseautomation-0.0.4'
+adding 'databaseautomation-0.0.4\src'
+adding 'databaseautomation-0.0.4\PKG-INFO'
+adding 'databaseautomation-0.0.4\pyproject.toml'
+adding 'databaseautomation-0.0.4\README.md'
+adding 'databaseautomation-0.0.4\setup.cfg'
+adding 'databaseautomation-0.0.4\setup.py'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info'
+adding 'databaseautomation-0.0.4\src\mongodb_connect'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info\dependency_links.txt'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info\PKG-INFO'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info\requires.txt'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info\SOURCES.txt'
+adding 'databaseautomation-0.0.4\src\databaseautomation.egg-info\top_level.txt'
+adding 'databaseautomation-0.0.4\src\mongodb_connect\mongo_crud.py'
+adding 'databaseautomation-0.0.4\src\mongodb_connect\__init__.py'
+removing 'databaseautomation-0.0.4' (and everything under it)
