@@ -11,7 +11,7 @@ setup(
     install_requires=["pandas",
 "scikit-learn",
 "numpy",
-"seaborn". 
+"seaborn",
 "flask",
 "mlflow==2.2.2",
 "dvc",
