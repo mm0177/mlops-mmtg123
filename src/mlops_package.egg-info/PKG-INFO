@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
-Name: databaseautomation
-Version: 0.0.4
+Name: mlops-package
+Version: 0.0.2
 Summary: A python package for connecting with database.
-Home-page: https://github.com/mm0177/mongodbconnectorpkg
+Home-page: https://github.com/mm0177/mlops
 Author: mm0177
 Author-email: mm0177@srmist.edu.in
 License: MIT
-Project-URL: Bug Tracker, https://github.com/mm0177/mongodbconnectorpkg/issues
+Project-URL: Bug Tracker, https://github.com/mm0177/mlops/issues
 Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
