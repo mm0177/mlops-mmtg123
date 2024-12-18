@@ -1,7 +1,6 @@
 from setuptools import find_packages, setup
 
-with open("requirements.txt", "r") as file:
-    requirements = file.read().splitlines()
+
 
 setup(
     name="mlops",
@@ -21,7 +20,7 @@ setup(
 
 
 "pytest==7.1.3",
-"tox==3.25.1",
+"tox",
 "black==22.8.0",
 "flake8==5.0.4",
 "mypy==0.971"],
