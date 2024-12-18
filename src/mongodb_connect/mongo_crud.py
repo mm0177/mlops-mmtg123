@@ -67,5 +67,5 @@ class mongo_operation:
             dataframe=pd.read_excel(self.path,encoding='utf-8')
             
         datajson=json.loads(dataframe.to_json(orient='record'))
-        collection=self.create_collection()
+        collection=self.create_collection(collection_name)
         collection.insert_many(datajson)
