@@ -1,1 +1,1 @@
-"this is the package file"
+"this is the package file for the conncetor"
