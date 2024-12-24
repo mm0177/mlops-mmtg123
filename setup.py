@@ -6,8 +6,8 @@ with open('README.md', 'r', encoding='utf-8') as f:
    
 
 __version__ = "0.0.2"
-REPO_NAME = "mlops"
-PKG_NAME= "mlops-package"
+REPO_NAME = "mlops-mmtg123"
+PKG_NAME= "mlops-package-mmtg"
 AUTHOR_USER_NAME= "mm0177"
 AUTHOR_EMAIL = "mm0177@srmist.edu.in"
 
