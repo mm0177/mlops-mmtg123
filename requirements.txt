@@ -4,7 +4,11 @@ dnspython
 pandas
 numpy
 ensure
-
+dvc
+joblib
+scikit-learn
+boto3
+zipfile36
 
 
 pytest==7.1.3

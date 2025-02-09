@@ -1,0 +1,7 @@
+FROM jenkins/jenkins:lts
+
+# Install Docker inside the Jenkins container
+USER root
+
+# Switch back to Jenkins user
+USER jenkins

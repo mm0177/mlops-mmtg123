@@ -1,0 +1,67 @@
+/* Background with gradient and slight animation */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3, #ff758c);
+    animation: gradientMove 6s infinite alternate;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+  
+  /* Card-like content box */
+  .content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+  }
+  
+  /* Heading with glow effect */
+  .intro-container h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Description text */
+  .intro-container p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+  
+  /* Get Started button */
+  .intro-container button {
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #ff5e62, #ff9966);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 94, 98, 0.5);
+    outline: none;
+  }
+  
+  .intro-container button:hover {
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+    transform: scale(1.05);
+  }
+  

@@ -2,6 +2,10 @@ README.md
 pyproject.toml
 setup.cfg
 setup.py
+src/components/__init__.py
+src/components/data_ingestion.py
+src/components/data_transformation.py
+src/components/model_trainer.py
 src/mlops_package_mmtg.egg-info/PKG-INFO
 src/mlops_package_mmtg.egg-info/SOURCES.txt
 src/mlops_package_mmtg.egg-info/dependency_links.txt
@@ -9,3 +13,10 @@ src/mlops_package_mmtg.egg-info/requires.txt
 src/mlops_package_mmtg.egg-info/top_level.txt
 src/mongodb_connect/__init__.py
 src/mongodb_connect/mongo_crud.py
+src/mongodb_connect/mysqlcrud.py
+src/pipeline/__init__.py
+src/pipeline/prediction_pipeline.py
+src/pipeline/training_pipeline.py
+src/utility/__init__.py
+src/utility/testing_pipeline.py
+src/utility/util.py
