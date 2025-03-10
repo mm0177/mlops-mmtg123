@@ -1,2 +1,7 @@
+# Ignore entire artifacts folder
+
 /train.csv
 node_modules
+
+artifacts/
+
