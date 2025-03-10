@@ -8,7 +8,7 @@ artifacts/
 mlruns
 remotestorage
 node_modules/
-.dvc/ 
+.dvc
 .pytest_cache
-.tox/
+.tox
 __pycache__
