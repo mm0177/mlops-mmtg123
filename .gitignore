@@ -11,4 +11,5 @@ node_modules/
 .dvc
 .pytest_cache
 .tox
+.github
 __pycache__
