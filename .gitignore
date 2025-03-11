@@ -16,4 +16,5 @@ node_modules/
 .github
 tests/__pycache__
 build
+agent.jar
 __pycache__
