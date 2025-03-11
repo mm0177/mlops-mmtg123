@@ -12,4 +12,5 @@ node_modules/
 .pytest_cache
 .tox
 .github
+build
 __pycache__
