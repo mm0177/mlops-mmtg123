@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9-slim'  # Use a Python Docker image
-            args '-u root:root'       # Grant permissions (adjust as needed)
+            image 'python:3.9-slim'  // Use a Python Docker image
+            args '-u root:root'       // Grant permissions (adjust as needed)
         }
     }
     stages {
@@ -12,7 +12,7 @@ pipeline {
                 git(
                     url: 'https://github.com/mm0177/mlops-mmtg123.git',
                     branch: 'main',
-                    credentialsId: 'your-github-credentials-id'  # Setup in Jenkins
+                    credentialsId: 'your-github-credentials-id'  // Use your credentials ID
                 )
             }
         }
@@ -48,7 +48,7 @@ pipeline {
         // (Optional) Stage 6: Tests
         stage('Run Tests') {
             steps {
-                sh 'python -m pytest tests/'  # If you have tests
+                sh 'python -m pytest tests/'  // If you have tests
             }
         }
     }
