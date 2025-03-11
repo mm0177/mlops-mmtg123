@@ -4,7 +4,9 @@
 
 src/train.csv
 artifacts/
-
+src/components/__pycache__
+src/pipeline/__pycache__
+src/utility/__pycache__
 mlruns
 remotestorage
 node_modules/
@@ -12,5 +14,6 @@ node_modules/
 .pytest_cache
 .tox
 .github
+tests/__pycache__
 build
 __pycache__
