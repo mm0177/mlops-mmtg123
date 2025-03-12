@@ -1,7 +1,13 @@
 FROM jenkins/jenkins:lts
 
-# Install Docker inside the Jenkins container
 USER root
 
-# Switch back to Jenkins user
+# Simplified Docker installation using Debian's packages
+RUN apt-get update && \
+    apt-get install -y \
+        docker.io \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 USER jenkins
