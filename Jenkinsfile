@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'python:3.9-slim'  // Use a Python Docker image
-            args '--user root'// Grant permissions (adjust as needed)
+            args '-u root:root'// Grant permissions (adjust as needed)
         }
     }
     stages {
