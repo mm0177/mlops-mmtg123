@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9'  // Use a Python Docker image
+            image 'python:3.9-slim'  // Use a Python Docker image
                   // Grant permissions (adjust as needed)
         }
     }
