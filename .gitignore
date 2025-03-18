@@ -13,7 +13,7 @@ node_modules/
 .dvc
 .pytest_cache
 .tox
-.github
+
 tests/__pycache__
 build
 agent.jar
