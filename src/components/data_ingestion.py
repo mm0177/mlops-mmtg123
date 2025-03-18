@@ -21,4 +21,4 @@ def DataIngestion(input_file: str, output_dir: str):
 
 # Example usage
 if __name__ == "__main__":
-    DataIngestion(r"C:\Users\DELL\OneDrive\Desktop\mlops\train.csv", './artifacts')
+    DataIngestion(r"train.csv", './artifacts')
