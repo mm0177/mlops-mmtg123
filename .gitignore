@@ -1,6 +1,5 @@
 # Ignore entire artifacts folder
 
-/train.csv
 
 src/train.csv
 artifacts/
