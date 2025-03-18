@@ -1,23 +1,21 @@
-name: ML Pipeline
+name: MLOps Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  run-ml-pipeline:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.8'
 
@@ -26,14 +24,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:./src" >> $GITHUB_ENV
+
       - name: Run Data Ingestion
-        run: |
-          python src/components/data_ingestion.py
+        run: python src/components/data_ingestion.py
 
       - name: Run Data Transformation
-        run: |
-          python src/components/data_transformation.py
+        run: python src/components/data_transformation.py
 
       - name: Run Model Trainer
-        run: |
-          python src/components/model_trainer.py
+        run: python src/components/model_trainer.py
