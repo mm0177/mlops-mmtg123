@@ -34,4 +34,4 @@ jobs:
         run: python src/components/data_transformation.py
 
       - name: Run Model Trainer
-        run: python src/components/model_trainer.py
+        run: python src/pipeline/training_pipeline.py
