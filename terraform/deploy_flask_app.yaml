@@ -22,7 +22,7 @@
     - name: Clone Flask app repository
       git:
         repo: https://github.com/mm0177/mlops-mmtg123.git
-        dest: /home/ubuntu/mlops
+        dest: /home/ec2-user/mlops
         version: main  # Specify branch if needed
 
     - name: Configure Nginx as a reverse proxy
@@ -59,8 +59,8 @@
           After=network.target
 
           [Service]
-          User=ubuntu
-          WorkingDirectory=/home/ubuntu/mlops/backend
+          User=ec2-user
+          WorkingDirectory=/home/ec2-user/mlops/backend
           ExecStart=/usr/local/bin/gunicorn --bind 0.0.0.0:5000 app:app
           Restart=always
 
