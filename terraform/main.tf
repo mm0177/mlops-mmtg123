@@ -39,7 +39,7 @@ resource "aws_instance" "flask_app" {
               sudo apt-get update -y
               sudo apt-get install -y python3 python3-pip git
               sudo pip3 install ansible
-              git clone https://github.com/yourusername/ansible-playbooks.git /home/ec2-user/ansible-playbooks
+              git clone https://github.com/mm0177/mlops-mmtg123.git /home/ec2-user/ansible-playbooks
               ansible-playbook -i "localhost," -c local /home/ec2-user/ansible-playbooks/deploy_flask_app.yml
               EOF
 
