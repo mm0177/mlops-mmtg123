@@ -1,0 +1,82 @@
+---
+- name: Deploy Flask App on EC2
+  hosts: localhost
+  become: yes  # Run tasks with sudo privileges
+  tasks:
+    - name: Install system dependencies
+      apt:
+        name:
+          - nginx
+          - python3
+          - python3-pip
+        state: present
+        update_cache: yes
+
+    - name: Install Flask and Gunicorn
+      pip:
+        name:
+          - flask
+          - gunicorn
+        executable: pip3
+
+    - name: Clone Flask app repository
+      git:
+        repo: https://github.com/mm0177/mlops-mmtg123.git
+        dest: /home/ubuntu/mlops
+        version: main  # Specify branch if needed
+
+    - name: Configure Nginx as a reverse proxy
+      copy:
+        content: |
+          server {
+              listen 80;
+              server_name _;
+              location / {
+                  proxy_pass http://127.0.0.1:5000;
+                  include proxy_params;
+              }
+          }
+        dest: /etc/nginx/sites-available/flaskapp
+      notify: restart nginx
+
+    - name: Remove default Nginx site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Enable Flask app Nginx site
+      file:
+        src: /etc/nginx/sites-available/flaskapp
+        dest: /etc/nginx/sites-enabled/flaskapp
+        state: link
+      notify: restart nginx
+
+    - name: Set up Gunicorn systemd service
+      copy:
+        content: |
+          [Unit]
+          Description=Gunicorn instance for Flask app
+          After=network.target
+
+          [Service]
+          User=ubuntu
+          WorkingDirectory=/home/ubuntu/mlops/backend
+          ExecStart=/usr/local/bin/gunicorn --bind 0.0.0.0:5000 app:app
+          Restart=always
+
+          [Install]
+          WantedBy=multi-user.target
+        dest: /etc/systemd/system/flaskapp.service
+      notify: restart flaskapp
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+
+    - name: restart flaskapp
+      service:
+        name: flaskapp
+        state: restarted
+        enabled: yes
