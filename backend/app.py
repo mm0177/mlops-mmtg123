@@ -1,20 +1,28 @@
 # backend/app.py
 from flask import Flask, render_template, request, send_from_directory, jsonify,make_response
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pandas as pd
-from pipeline.prediction_pipeline import prediction_pipeline
+from src.pipeline.prediction_pipeline import prediction_pipeline
 import joblib
 import pandas as pd
-from components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformation
 from utility.util import load_csv
 
 # Create the Flask app, pointing to the React build for templates and static files
 app = Flask(__name__, template_folder='build', static_folder='build/static')
 
+metrics = PrometheusMetrics(app)
+
+
 # Serve the React application for non-API routes
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
+    if path =='metrics':
+        return None
     if path != "" and os.path.exists(os.path.join(app.template_folder, path)):
         return send_from_directory(app.template_folder, path)
     else:
