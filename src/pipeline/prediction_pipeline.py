@@ -1,6 +1,10 @@
 import joblib
 import pandas as pd
-from components.data_transformation import DataTransformation
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from src.components.data_transformation import DataTransformation
 from utility.util import load_csv
 
 def prediction_pipeline(input_df: pd.DataFrame, artifacts_dir: str):
